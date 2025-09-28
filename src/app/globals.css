@@ -1,3 +1,14 @@
+@import "@progress/kendo-theme-default/dist/all.css";
+
+:root {
+	--snow: #fbf5f3ff;
+	--french-gray: #c9c4c9ff;
+	--taupe-gray: #97939fff;
+	--dim-gray: #646276ff;
+	--space-cadet: #32314cff;
+	--oxford-blue: #000022ff;
+}
+
 * {
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
@@ -6,12 +17,64 @@
 }
 
 body {
+	color: var(--snow);
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+	background-image: radial-gradient(
+		at 60% 60%,
+		var(--oxford-blue),
+		var(--space-cadet)
+	);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-h1 {
-	margin: 10px;
+.k-h1 {
+	letter-spacing: 20px;
+	line-height: 5rem;
+	font-size: 2rem;
 	text-align: center;
+	margin-bottom: 5rem;
+
+	span {
+		font-size: 6rem;
+		letter-spacing: normal;
+		font-weight: 900;
+	}
+}
+
+.k-h4 {
+	color: var(--oxford-blue);
+	margin-bottom: 5rem;
+	max-width: 60vw;
+	text-align: center;
+}
+
+.bg-clip {
+	position: absolute;
+	top: 50vh;
+	border-radius: 100%;
+	background-color: var(--snow);
+	width: 150vw;
+	height: 100vh;
+	z-index: -50;
+}
+
+.k-button {
+	padding: 1rem 2rem;
+	background-color: var(--oxford-blue);
+	border: none;
+	font-size: 1.3rem;
+	border-radius: 1rem;
+	color: var(--snow);
+	transition-duration: 1s;
+	&:hover {
+		background-color: #000022aa;
+	}
+	&:active {
+		scale: 95%;
+	}
 }
